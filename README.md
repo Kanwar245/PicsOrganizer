@@ -1,9 +1,9 @@
 # PicsOrganizer
 
-1. mkpics
+# mkpics
 This program writes to standard output a valid html that will display a table of photos. The first command line argument to mkpics is the number of columns in the table, and the remaining arguments are the files to be displayed.
 
-### Details:
+## Details:
 
 * If there are not enough pictures to fill all of the rows, then the incomplete row may be the first row or the last row.
 * Please include the height=100 attribute in each img tag in your table so that the page will be displayed reasonably.
@@ -59,7 +59,7 @@ IMGP3069.jpg: Image Generated: 2011:03:10 12:15:24
 
 Then the result of running filepics vacation would be the following:
 
-3. mkpics2
+# mkpics2
 The mkpics2 program is a modified version of the mkpics program that takes the number of columns and a directory as an argument instead of the number of columns and list of files. The directory is the root of a tree of ''filed'' pictures from running filepics. It contains subdirectories by year which themselves contain subdirectories by month which contain the pictures.
 
 The program writes to standard output one html document that has a table of photos for each year. Each table is preceded by an <h2> header with the year. All of the details from mkpics apply to this program as well.
