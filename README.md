@@ -60,6 +60,7 @@ IMGP3064.jpg: Image Generated: 2011:03:10 11:39:40
 IMGP3069.jpg: Image Generated: 2011:03:10 12:15:24
 
 Then the result of running filepics vacation would be the following:
+![alt-text] (https://github.com/Kanwar245/PicsOrganizer/blob/master/file_structure.png)
 
 # mkpics2
 The mkpics2 program is a modified version of the mkpics program that takes the number of columns and a directory as an argument instead of the number of columns and list of files. The directory is the root of a tree of ''filed'' pictures from running filepics. It contains subdirectories by year which themselves contain subdirectories by month which contain the pictures.
