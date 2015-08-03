@@ -38,7 +38,7 @@ Here's an example html file that might be produced by your program is shown belo
 </table>
 </body> </html>
 
-2. filepics
+# filepics
 Digital cameras typically add data to a jpeg file known as Exif (Exchangeable Image File) data. This data includes the time the picture was taken or generated.
 
 The program <a href="http://linux.die.net/man/1/exiftime">exiftime</a> prints to standard output the time information stored in a jpeg file. 
