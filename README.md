@@ -15,7 +15,7 @@ This program writes to standard output a valid html that will display a table of
 
 Here's an example html file that might be produced by your program is shown below.
 
-"<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <title>Pictures</title>
@@ -36,7 +36,7 @@ Here's an example html file that might be produced by your program is shown belo
 <td><img src="pictures/IMG6.jpg" height=100></td> 
 </tr> 
 </table>
-</body> </html>"
+</body> </html>`
 
 # filepics
 Digital cameras typically add data to a jpeg file known as Exif (Exchangeable Image File) data. This data includes the time the picture was taken or generated.
@@ -66,7 +66,7 @@ The program writes to standard output one html document that has a table of phot
 
 Running mkpics2 2 . on the tree above would produce the following html page.
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <title>Pictures</title>
@@ -92,4 +92,4 @@ Running mkpics2 2 . on the tree above would produce the following html page.
 <td><img src="2011/03/IMGP3069.jpg" height=100></td> 
 </tr> 
 </table>
-</body> </html>
+</body> </html>`
