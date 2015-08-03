@@ -1,18 +1,18 @@
 #!/bin/sh
 
-for i in $1/*.jpg; do					#running through jpg files only
+for i in $1/*.jpg; do					
 	year=`exiftime -tg $i | cut -f 3 -d ' ' | cut -f 1 -d : | sort`
 	month=`exiftime -tg $i | cut -f 3 -d ' ' | cut -f 2 -d : | sort`
-	if [ -d ./$year ]; then				#if the year exists
-		if [ -d ./$year/$month ]; then		#and the month exists
-			cp $i ./$year/$month		#move the file to the folder
-		else					#however if the month doesn't exist
-			mkdir ./$year/$month		#create month
-			cp $i ./$year/$month		#and move the file to it
+	if [ -d ./$year ]; then			
+		if [ -d ./$year/$month ]; then	
+			cp $i ./$year/$month	
+		else				
+			mkdir ./$year/$month	
+			cp $i ./$year/$month	
 		fi
-	else						#however if the year doesn't exist
-		mkdir ./$year				#create year
-		mkdir ./$year/$month			#and then create month
-		cp $i ./$year/$month			#and move the file to it
+	else					
+		mkdir ./$year			
+		mkdir ./$year/$month		
+		cp $i ./$year/$month		
 	fi
 done
