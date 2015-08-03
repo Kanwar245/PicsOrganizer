@@ -1,10 +1,10 @@
 #!/bin/sh
 
-columns=$1  	#first argument is the number of columns
+columns=$1  
 shift
 new=0
 
-if [ $# -ne 0 ]; then		#only if the arguments are given should we print the html output
+if [ $# -ne 0 ]; then	
 	echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">"
 	echo "<html>"
 		echo "<head>"
@@ -14,25 +14,25 @@ if [ $# -ne 0 ]; then		#only if the arguments are given should we print the html
 				echo "<h1>Pictures</h1>"
 				echo "<table>"
 
-				while [ $# -ne 0 ]; do					#while number of arguments are not zero
-					if [ -z `file $1 | grep -o "JPEG"` ]; then	#case when all arguments are not JPEG file type
-						echo "$1: Invalid file argument" >&2	#send the invalid arguments to the standard error
+				while [ $# -ne 0 ]; do					
+					if [ -z `file $1 | grep -o "JPEG"` ]; then
+						echo "$1: Invalid file argument" >&2	
 						shift
 					else
 						echo "<tr>"
-						while [ $new -lt $columns ]; do		#stop once you hit the number of columns
-							if [ -z $1 ]; then			#if no more arguments come out of the loop
+						while [ $new -lt $columns ]; do		
+							if [ -z $1 ]; then		
 								break
-							elif [ `file $1 | grep -o "JPEG"` ]; then				#JPEG file type
-								echo "<td><img src=\"$1\" height=100></td>"		#print all possible files before you hit the column limit
+							elif [ `file $1 | grep -o "JPEG"` ]; then			
+								echo "<td><img src=\"$1\" height=100></td>"
 								shift
 								new=`expr $new + 1`
 							else
-								echo "$1: Invalid file argument" >&2	#send the invalid argument to the standard error
+								echo "$1: Invalid file argument" >&2
 								shift
 							fi
 						done
-						new=0				#re-initiliaze to 0, to start again once the column limit is hit
+						new=0
 						echo "</tr>"
 					fi
 				done
